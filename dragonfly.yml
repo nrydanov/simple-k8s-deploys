@@ -19,6 +19,7 @@ spec:
       containers:
         - name: dragonfly
           image: docker.dragonflydb.io/dragonflydb/dragonfly
+          args: ["--requirepass", "${DRAGONFLY_PASSWORD}"]
           ports:
           - name: internal
             containerPort: 6379
